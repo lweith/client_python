@@ -385,7 +385,7 @@ class TestPushGateway(unittest.TestCase):
 
     def test_metrics_handler(self):
         handler = MetricsHandler.factory(self.registry)
-        self.assertEqual(handler.registry, self.registry)
+        self.assertEqual(handler.prometheus_registry, self.registry)
 
     def test_metrics_handler_subclassing(self):
         subclass = type(str('MetricsHandlerSubclass'), (MetricsHandler, object), {})
